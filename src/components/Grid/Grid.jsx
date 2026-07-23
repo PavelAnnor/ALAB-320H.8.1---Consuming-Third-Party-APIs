@@ -1,6 +1,5 @@
 export default function Grid({ rows = "auto", content }) {
 
-     console.log(rows);
      
   return (
     <div
@@ -13,6 +12,7 @@ export default function Grid({ rows = "auto", content }) {
         margin: "auto",
       }}
     >
+      {/* conditional to avoid rendering with content = null */}
       {content && <Cards content={content}></Cards>}
     </div>
   );
